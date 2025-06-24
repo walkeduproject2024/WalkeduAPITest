@@ -6,9 +6,10 @@ Feature: Get Sirket Ogrencilerini Getir - Company
   Scenario: Get All Messages
     * url baseURL
     * path '/company-students'
+    * params {page:8,size:10}
     * header token = authToken
     And method Get
     * status 200
     * def response = response
     * assert response.totalCount == 10
-    * assert response.message == "Şirketteki aktif öğrenciler görüntülenmedi"
+    * assert response.message == "Şirketteki aktif öğrenciler görüntülendi"
