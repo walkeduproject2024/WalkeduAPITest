@@ -1,0 +1,32 @@
+[{
+  "name":"Test Messenger",
+  "email":"testmessagea@gmail.com",
+  "thema":"test theme",
+  "tel":"+905345343434",
+  "message":"Test text message"
+}
+,
+{
+  "name":"Test Messenger123",
+  "email":"testmessagea@gmail.com",
+  "thema":"test theme",
+  "tel":"+905345343434",
+  "message":"Test text message"
+}
+,
+  {
+    "name":"Test Messenger",
+    "email":"testmessageagmail.com",
+    "thema":"test theme",
+    "tel":"+905345343434",
+    "message":"Test text message"
+  }
+,
+  {
+    "name":"Test Messenger",
+    "email":"testmessagea@gmail.com",
+    "thema":"test theme",
+    "tel":"+telefon",
+    "message":"Test text message"
+  }
+]
