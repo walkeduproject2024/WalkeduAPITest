@@ -10,3 +10,4 @@ Feature: Get All Messages - Admin
     * header token = authToken
       And method Get
     * status 200
+
