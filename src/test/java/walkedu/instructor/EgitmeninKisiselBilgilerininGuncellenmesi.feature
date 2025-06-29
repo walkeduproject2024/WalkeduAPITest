@@ -1,8 +1,8 @@
-Feature: Egitmen Kisisel Bilgilerini Güncelleme
+Feature: Eğitmen Kişisel Bilgisi Güncellenebilirliği
   Background:
     * def myToken = call read('classpath:caller/TokenCall.feature') {"email":"sadikislar@itopiatech.com.tr","password":"Walkedu.25"}
     * def authToken =  'Bearer '+myToken.Token
-  Scenario: Kisisel Bilgileri Güncelleme
+  Scenario: Kişisel Bilgi Güncelleme-Instructors
     * url baseURL
     * path '/update-instructor-self'
     * header token = authToken
@@ -10,4 +10,4 @@ Feature: Egitmen Kisisel Bilgilerini Güncelleme
     * request myBody
     * method patch
     * status 200
-    * assert response.education[1].school == 'ODTÜ3'
+    * assert response.other.aboutMe == "Eğitim her bireyin hakkıdır"

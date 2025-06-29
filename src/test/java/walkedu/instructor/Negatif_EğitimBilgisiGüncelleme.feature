@@ -6,7 +6,7 @@ Feature: Eğitim Bilgisinin Güncellenebilirliği-Instructer
     * url baseURL
     * path '/instructor-edu/686096be992249a0bf01abe3'
     * header token = authToken
-    * def myBody = read('classpath:data/egitimbilgisi.json')
+    * def myBody = read('classpath:data/eksikeğitimbilgisi.json')
     * request myBody
     * method patch
     * status 200

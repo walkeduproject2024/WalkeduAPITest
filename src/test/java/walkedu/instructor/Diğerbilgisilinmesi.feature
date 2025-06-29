@@ -1,11 +1,10 @@
-Feature: Diğer Bilginin Getirilebilirliği-Instructer
+Feature: Diğer Bilginin Silinebilirliği-Instructer
   Background:
     * def myToken = call read('classpath:caller/TokenCall.feature') {"email":"sadikislar@itopiatech.com.tr","password":"Walkedu.25"}
     * def authToken =  'Bearer '+myToken.Token
-  Scenario: Diğer Bilginin Getirilmesi
+  Scenario: Diğer Bilginin Silinmesi
     * url baseURL
-    * path '/instructor-other'
+    * path '/instructor-interest/66baf2c8dc2e132d28923eb7'
     * header token = authToken
-    * method Get
-    * status 200
-    * assert response._id == "6827253a85fe3e6e38782e9b"
+    * method Delete
+    * status 204

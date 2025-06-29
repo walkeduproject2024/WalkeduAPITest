@@ -4,7 +4,7 @@ Feature: Eğitim Bilgisinin Silinmesi-Instructer
     * def authToken =  'Bearer '+myToken.Token
   Scenario: Egitim Bilgisinin Silinmesi
     * url baseURL
-    * path '/instructor-edu/6852f88c0dffbb5936106fb5'
+    * path '/instructor-edu/68603c28992249a0bf018e3a'
     * header token = authToken
     * method Delete
     * status 204

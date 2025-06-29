@@ -1,12 +1,11 @@
-Feature: Diğer Bilginin Eklenebilirliği-Instructer
+Feature: Eğitim Bilgisinin Getirilmesi-Instructors
   Background:
     * def myToken = call read('classpath:caller/TokenCall.feature') {"email":"sadikislar@itopiatech.com.tr","password":"Walkedu.25"}
     * def authToken =  'Bearer '+myToken.Token
-  Scenario: Diğer Bilginin Eklenmesi
+  Scenario: Eğitim Bilgisini Getirme
     * url baseURL
-    * path '/instructor-interest'
+    * path '/instructor-edu'
     * header token = authToken
-    * def myBody = read('classpath:data/digerbilgieklemeıd.json')
-    * request myBody
-    * method post
+    * method Get
     * status 200
+    * assert response.education[0].graduationDate == "2015-07-15T00:00:00.000Z"
