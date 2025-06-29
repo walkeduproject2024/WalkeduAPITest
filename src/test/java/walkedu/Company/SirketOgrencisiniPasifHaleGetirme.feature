@@ -1,17 +1,17 @@
-Feature: PATCH Sirket Ogrencisini Aktif Hale Getirme - Company
+Feature: PATCH Sirket Ogrencisini Pasif Hale Getirme - Company
 
   Background:
     * def myToken = call read('classpath:caller/TokenCall.feature') { "email": "okurmahir7@gmail.com", "password": "Walkedu.24" }
     * def authToken = 'Bearer ' + myToken.Token
 
-  Scenario: Pasif Ogrenciyi aktif hale getirme
+  Scenario: Aktif ogrenciyi pasif hale getirme
     * def studentId = '66f15588f28b544d6edf76cf'
     * url baseURL
-    * path 'reactive-student', studentId
+    * path 'deactive-student', studentId
     * header Content-Type = 'application/json'
     * header token = authToken
     * request {}
     * method PATCH
     * status 200
     * def responseJson = response
-    * assert response.message == "Öğrenci Aktif Hale Getirilmiştir"
+    * assert response.message == "Öğrenci Pasif Hale Getirilmiştir"
