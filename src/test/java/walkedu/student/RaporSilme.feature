@@ -6,12 +6,12 @@ Feature: Rapor silme -student
 
     Scenario: Rapor silme
       * url baseURL
-      * path '/student/report/685d11ec992249a0bf0167ce/'
+      * path '/student/report/68640250992249a0bf02d5a5/'
       * header token = authToken
       * request
       """
       {
-          "_id": "685d11ec992249a0bf0167ce"
+          "_id": "68640250992249a0bf02d5a5"
         }
         """
       * method delete

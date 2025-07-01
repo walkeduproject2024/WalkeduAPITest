@@ -7,6 +7,7 @@ Feature: Get Öğrenci Profili Görüntüleme- Student
     Scenario:  Öğrenci profili görüntüleme
       * url baseURL
       * path  '/student/profile'
-      * header token = authToken = authToken
+      * header token = authToken
       * method Get
       * status 200
+      * match response._id == '685c3d3ddba4636ef456ffb4'

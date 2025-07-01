@@ -12,11 +12,12 @@ Feature: Tokensız eğitim bilgisi güncelleme - Negatif test
     * request
     """
     {
-      "schooleName": "Birinci İlkokulu",
-      "grade": "",
+      "schooleName": "Mustafa İlkokulu",
+      "grade": "8",
       "status": "",
       "_id": "685c3d3ddba4636ef456ffb6"
     }
     """
     * method patch
     * status 401
+    * match response.message == "Lütfen giriş yapınız."
