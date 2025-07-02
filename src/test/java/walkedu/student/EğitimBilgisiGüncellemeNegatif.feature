@@ -9,6 +9,7 @@ Feature: Tokensız eğitim bilgisi güncelleme - Negatif test
   Scenario: Token olmadan eğitim bilgisi güncellenmeye çalışıldığında hata dönmeli
     * url baseURL
     * path '/student/edu-profile/685c3d3ddba4636ef456ffb6'
+    * def requestBody = read('classpath:data/UpdateEduProfile_NoToken.json')
     * request
     """
     {

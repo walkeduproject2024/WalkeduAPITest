@@ -6,8 +6,10 @@ Feature: Get Öğrenci Profili Görüntüleme- Student
 
     Scenario:  Öğrenci profili görüntüleme
       * url baseURL
+      * def expectedResponse = read('classpath:data/ExpectedStudentProfile.json')
       * path  '/student/profile'
       * header token = authToken
       * method Get
       * status 200
       * match response._id == '685c3d3ddba4636ef456ffb4'
+      * match response._id == expectedResponse._id
