@@ -11,5 +11,5 @@ Feature: Get Sirket Ogrencilerini Getir - Company
     And method Get
     * status 200
     * def response = response
-    * assert response.totalCount == 10
+    * assert response.totalCount == 11
     * assert response.message == "Şirketteki aktif öğrenciler görüntülendi"
