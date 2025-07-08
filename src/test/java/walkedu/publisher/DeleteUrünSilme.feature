@@ -6,9 +6,19 @@ Feature: urun silme
     * url baseURL
     * header token = authToken
 
-  Scenario: ürün silme
+  Scenario: Son eklenen ürünü getir
+    * url baseURL
+    * path '/get-self-products'
+    * header token = authToken
+    * method Get
+    * status 200
+    * def sonUrun = response.products[0]._id
+    * print 'Son ürün:', sonUrun
 
-    * path '/delete-self-product/6861dc11992249a0bf01df3f'
+
+  Scenario: ürün silme
+    * path '/delete-self-product/686c5f8c992249a0bf03dfff'
     When method delete
     Then status 200
     * assert response.message == 'Ürün silindi'
+

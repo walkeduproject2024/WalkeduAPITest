@@ -8,10 +8,10 @@ Feature: Yayımcı Profil Güncelleme - PATCH (logo + json)
     * header token = authToken
 
   Scenario: Yayımcı profilini logo + bilgilerle multipart olarak güncelle
-    * def imageFile = { read: 'classpath:data/tennis.png', filename: 'tennis.png', contentType: 'image/png' }
+   * def imageFile = { read: 'classpath:data/tennis.png', filename: 'tennis.png', contentType: 'image/png' }
     And multipart file logo = imageFile
     And multipart field country = 'Spain'
-    And multipart field state = 'Cadiz'
+    And multipart field state = 'sevilla'
     And multipart field district = 'Puerto Real'
     And multipart field address = 'Calle Union De Hermanos'
     And multipart field authorizeds[0][name] = 'Sema Aslan'
@@ -26,7 +26,7 @@ Feature: Yayımcı Profil Güncelleme - PATCH (logo + json)
     * match response.profile.authorizeds[0].email == 'tekrarsema@gmail.com'
     * match profile.user.img contains 'tennis-'
     * match profile.country == 'Spain'
-    * match profile.state == 'Cadiz'
+    * match profile.state == 'sevilla'
     * match profile.district == 'Puerto Real'
     * match profile.address == 'Calle Union De Hermanos'
     * match profile.authorizeds[0].name == 'Sema Aslan'

@@ -8,11 +8,11 @@ Feature: Yayımcı Yeni Ürün Oluşturma - POST (JSON + Multipart)
     * header token = authToken
 
   Scenario: Kategori çek ve ürün oluştur (multipart/form-data)
-    * def imageFile = { read: 'classpath:data/tennis.png', filename: 'tennis.png', contentType: 'image/png' }
+    * def myImage = { read: 'classpath:data/bannerTest.png', filename: 'bannerTest.png', contentType: 'image/png' }
     And multipart field publishLabel = 'Yeni Sema Yayimcilik'
-    And multipart field productName = 'semazen akıstaaaaaaaaaaaaa'
+    And multipart field productName = 'intellij deneme12'
     And multipart field categories = '6761c1643723e9250860dfaa'
-    And multipart field product.images = imageFile
+    * multipart file productImg = myImage
     And multipart field description = 'Eğitici, dikkat geliştirici set.'
     And multipart field stock = 100
     And multipart field price = '15.500,50'
