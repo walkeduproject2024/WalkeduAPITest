@@ -6,7 +6,8 @@ Feature: Delete Company App - Admin
 
   Scenario: Deleting company application
     * url baseURL
-    * path '/admin/app-company/676ac46b17638a3121132bba'
+    * path '/admin/app-company/67697d7d840d5e79c451dfbe'
     * header token = authToken
     * method Delete
     * status 204
+    * assert response == ''

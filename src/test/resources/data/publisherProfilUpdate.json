@@ -1,0 +1,14 @@
+{
+  "country": "Spain",
+  "city": "Cadiz",
+  "district": "Puerto Real",
+  "address": "Calle Union De Hermanos",
+  "authorizeds": [
+    {
+      "name": "Sema Aslan",
+      "phoneNumber": "+491234567890",
+      "email": "tekrarsema@gmail.com",
+      "duty": "QA Engineer"
+    }
+  ]
+}
