@@ -10,7 +10,7 @@ Feature: Approving Personal Application E2E - Admin
     * path '/app-personal'
     * def personalCV = read('classpath:data/Admin_Personal_App_CV.pdf')
     * multipart field fullName = 'Tester Applicantx'
-    * multipart field email = 'testerapp25@mail.com'
+    * multipart field email = 'testerapp31@mail.com'
     * multipart field phone = '+905551234455'
     * multipart field dateOfBirth = '2000-01-01'
     * multipart field bachelor = 'Psikoloji'

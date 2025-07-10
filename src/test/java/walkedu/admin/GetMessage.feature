@@ -6,8 +6,8 @@ Feature: Get Message - Admin
 
     Scenario: Get message by ID
       * url baseURL
-      * path '/messages/679d2c78969afb9ec97fdb83'
+      * path '/messages/679d1b5b969afb9ec97fd2ce'
       * header token = authToken
       And method Get
       * status 200
-      * assert response.name == "Kübra Tankişi"
+      * assert response.name == "Test Messenger"

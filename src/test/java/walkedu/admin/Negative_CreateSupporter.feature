@@ -29,7 +29,7 @@ Feature: (Negative)Create Supporter - Admin
     * url baseURL
     * path '/admin/createsupporter'
     * header token = authToken
-    * def myBody = read('classpath:data/newSupporter.json')
+    * def myBody = read('classpath:data/newSupporterEmpty.json')
     * request myBody
     * method Post
     * status 400
@@ -39,9 +39,9 @@ Feature: (Negative)Create Supporter - Admin
     * url baseURL
     * path '/admin/createsupporter'
     * header token = authToken
-    * def myBody = read('classpath:data/newSupporter.json')
+    * def myBody = read('classpath:data/newSupporterNegative.json')
     * request myBody
     * method Post
     * status 400
-    * assert response.details == "User validation failed: email: Lütfen geçerli bir e-posta adresi girin"
+    * assert response.details == "email must be a valid email address."
 
